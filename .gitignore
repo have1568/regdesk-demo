@@ -1,0 +1,14 @@
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+
+node_modules
+
+apps/react-frontend/dist
+apps/react-frontend/node_modules
+apps/api-server/dist
+apps/api-server/node_modules
+
