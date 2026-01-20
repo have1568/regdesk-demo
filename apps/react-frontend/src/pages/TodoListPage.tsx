@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import type { AppDispatch } from '../store';
-import { fetchTodos } from '../store/todoSlice';
-import { TodoApp } from '../components/TodoApp';
+import React, {useEffect} from 'react';
+import {useDispatch} from 'react-redux';
+import type {AppDispatch} from '../store';
+import {fetchTodos} from '../store/todoSlice';
+import {TodoListApp} from '../components/TodoListApp.tsx';
+import {TodoAddApp} from "../components/TodoAddApp.tsx";
 
 export const TodoListPage: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -14,7 +15,8 @@ export const TodoListPage: React.FC = () => {
     return (
         <div className="container mt-3">
             <h3>Todo List</h3>
-            <TodoApp /> {/* TodoApp 内部直接读取 store */}
+            <TodoAddApp/> {/* useRef */}
+            <TodoListApp/> {/* TodoListApp 内部直接读取 store */}
         </div>
     );
 };
